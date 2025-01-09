@@ -1,0 +1,23 @@
+<h1>Lista de Todos los Clientes</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Activo</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cliente in clientes %}
+        <tr>
+            <td>{{ cliente.id }}</td>
+            <td>{{ cliente.nombre }}</td>
+            <td>{{ cliente.apellidos }}</td>
+            <td>{{ cliente.fecha_nacimiento }}</td>
+            <td>{{ cliente.activo }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

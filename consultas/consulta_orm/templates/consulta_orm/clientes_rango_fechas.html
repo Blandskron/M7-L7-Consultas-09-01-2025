@@ -1,0 +1,32 @@
+<h1>Clientes</h1>
+
+<form method="get">
+    <label for="inicio">Fecha Inicio:</label>
+    <input type="date" id="inicio" name="inicio" value="{{ inicio|date:'Y-m-d' }}">
+    
+    <label for="final">Fecha Final:</label>
+    <input type="date" id="final" name="final" value="{{ final|date:'Y-m-d' }}">
+    
+    <button type="submit">Buscar</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Fecha de Nacimiento</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cliente in clientes %}
+        <tr>
+            <td>{{ cliente.id }}</td>
+            <td>{{ cliente.nombre }}</td>
+            <td>{{ cliente.apellidos }}</td>
+            <td>{{ cliente.fecha_nacimiento }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,6 @@
+<h1>Facturas Pagadas</h1>
+<ul>
+  {% for factura in facturas %}
+    <li>Factura ID: {{ factura.id }} - Cliente ID: {{ factura.cliente_id }} - Importe: {{ factura.importe }}</li>
+  {% endfor %}
+</ul>

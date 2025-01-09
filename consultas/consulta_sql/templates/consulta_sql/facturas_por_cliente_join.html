@@ -1,0 +1,22 @@
+<h1>Facturas de {{ facturas.0.nombre }} {{ facturas.0.apellidos }}</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID Factura</th>
+            <th>Importe</th>
+            <th>Pagada</th>
+            <th>Cliente</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for factura in facturas %}
+        <tr>
+            <td>{{ factura.id }}</td>
+            <td>{{ factura.importe }}</td>
+            <td>{{ factura.pagada }}</td>
+            <td>{{ factura.nombre }} {{ factura.apellidos }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
